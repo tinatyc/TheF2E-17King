@@ -69,3 +69,8 @@
 ![dashboard](https://github.com/tinatyc/TheF2E-17King/blob/master/ScreenShot/3_adminOrder_Screenshot.gif?raw=true "dashboard圖示")
 
 --- 
+test
+- Dashes work just as well
+- And if you have sub points, put two spaces before the dash or star:
+  - Like this
+  - And this
