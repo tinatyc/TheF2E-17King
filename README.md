@@ -3,7 +3,9 @@
 ---
 ## Week1：
 > 挑戰主題：[TodoList](https://codepen.io/tinatyc/full/RJRQpQ)
+
 > 作品連結：<https://codepen.io/tinatyc/full/RJRQpQ>
+
 > 應用說明：代辦事項與清單
 
 ### 練習重點：
@@ -26,7 +28,9 @@
 
 ## Week2：
 > 挑戰主題：[Filter](https://tzeng17.com/TheF2E/Filter/)
+
 > 作品連結：<https://tzeng17.com/TheF2E/Filter/>
+
 > 應用說明：串連高雄市觀光景點的API，使網頁可以做篩選景點的動作。
 
 ### 練習重點：
@@ -49,7 +53,9 @@
 
 ## Week3：
 > 挑戰主題：[Admin Order](https://tzeng17.com/TheF2E/AdminOrder)
+
 > 作品連結：<https://tzeng17.com/TheF2E/AdminOrder>
+
 > 應用說明：主要實作dashboard的應用，我做的是虛擬幣的dashboard。
 > API找了coinmarketcap的來串，Endpoint API五分鐘更新一次，但是我怕DEMO等太久，在原訂可以選日期的地方改成更新秒數，第二頁Orders是用ajax做的網址不變，表格裡面的數字和標籤都是亂數產生的。
 
