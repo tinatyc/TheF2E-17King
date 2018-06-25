@@ -59,7 +59,7 @@
 ### 練習重點：
 
 - HighCharts.js
- - 本來想選`D3.js`但看了一下文件覺得學不完XD，改用[HighCharts](https://www.highcharts.com/)這套library，選用的原因是另外一套[Chart.js](https://www.chartjs.org/)是產生Canvas來顯示圖表，highcharts是用SVG來產生圖表，個人比較偏好SVG自由性比較高XD
+  - 本來想選`D3.js`但看了一下文件覺得學不完XD，改用[HighCharts](https://www.highcharts.com/)這套library，選用的原因是另外一套[Chart.js](https://www.chartjs.org/)是產生Canvas來顯示圖表，highcharts是用SVG來產生圖表，個人比較偏好SVG自由性比較高XD
 
  - Bootstrap4
    - 快速切版、排版訓練。
