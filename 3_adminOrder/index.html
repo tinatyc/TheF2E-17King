@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Admin Order-King Tzeng</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">17 Coin Watchlists <i class="fab fa-bitcoin"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto" id="navBar">
+                <li class="nav-item active">
+                    <a class="nav-link"">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">ORDERS</a>
+                </li>
+            </ul>
+            <div>
+                <img src="https://api.fnkr.net/testimg/25x25/00CED1/FFF/?text=17" class="rounded-circle">
+                <span class="navbar-text">
+                17 King
+              </span>
+            </div>
+        </div>
+    </nav>
+    <!-- label -->
+    <div id="pageContainer">
+        <div class="container">
+            <div class="row my-3 justify-content-between">
+                <h3>OVERVIEW</h3>
+            <!-- 秒數 -->
+            <div id="selectSec" class="btn-group btn-group-sm">
+                <button id="fiveMin" type="button" class="btn btn-outline-secondary active" >5分鐘</button>
+                <button id="oneMin" type="button" class="btn btn-outline-secondary">1分鐘</button>
+                <button id="thirtySec" type="button" class="btn btn-outline-secondary">5秒鐘</button>
+            </div>
+            </div>
+            <!-- 秒數 -->
+            <!-- label -->
+        </div>
+        <!-- section 1 -->
+        <div class="container">
+            <div class="row my-3">
+                <div class="col-4">
+                    <div class="border text-center box1">
+                        <h6 class="my-2"><i class="fas fa-chart-bar"></i> BitCoin USD</h6>
+                        <p class="box1-text text-success" id="btc_text">---</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="border text-center box1">
+                        <h6 class="my-2"><i class="fas fa-money-bill"></i> ETH USD</h6>
+                        <p class="box1-text text-danger" id="eth_text">---</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="border text-center box1">
+                        <h6 class="my-2"><i class="fas fa-dollar-sign"></i> Dash USD</h6>
+                        <p class="box1-text text-primary" id="dash_text">---</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section 1 -->
+        <!-- section 2 -->
+        <div class="container">
+            <div class="row my-3">
+                <div class="col-12">
+                    <div class="border bg-white">
+                        <div class="s2">
+                            <h5 class="my-4 mx-4">Watchlists</h5>
+                            <span class="pr-2 update">Last Update:</span>
+                        </div>
+                        <div id="chart" class="p-1 border">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section 2 -->
+        <!-- section 3 -->
+        <div class="container mb-3">
+            <div class="row">
+                <div class="col-6">
+                    <div class="border bg-white">
+                        <ul class="list-group list-group-flush p-3 list">Volume Change
+                            <li class="list-group-item">
+                                <i class="fab fa-btc"></i>
+                                <span id="btc_name" class="crytponame">---</span>
+                                <span id="btc_24volume" class="">---</span>
+                                <span id="btc_1h" class="persent">---</span>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fab fa-ethereum"></i>
+                                <span id="eth_name" class="crytponame">---</span>
+                                <span id="eth_24volume" class="">---</span>
+                                <span id="eth_1h" class="persent">---</span>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span id="dash_name" class="crytponame">---</span>
+                                <span id="dash_24volume" class="">---</span>
+                                <span id="dash_1h" class="persent">---</span>
+                            </li>
+                        </ul>
+                        <!-- <h5 class="p-3"></h5>
+                        <div>123123123</div> -->
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="border bg-white">
+                        <ul class="list-group list-group-flush p-3"><h5>Trade Volume</h5>
+                            <li class="list-group-item rText">
+                                <img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=A" class="rounded float-left mr-2">
+                                <div>
+                                    <p class="font-weight-bold">Detail</p>
+                                    <span><i class="far fa-clock pr-1"></i>2018/6/13  13:42</span>
+                                    <span><i class="far fa-user pr-1"></i>Alex</span>
+                                </div>
+                                <div>
+                                    <p class="font-weight-bold">Total</p>
+                                    <span>7,777</span>
+                                </div>
+                                
+                            </li>
+                            <li class="list-group-item rText">
+                                <img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=A" class="rounded float-left mr-2">
+                                <div>
+                                    <p class="font-weight-bold">Detail</p>
+                                    <span><i class="far fa-clock pr-1"></i>2018/6/13  13:42</span>
+                                    <span><i class="far fa-user pr-1"></i>Amos</span>
+                                </div>
+                                <div>
+                                    <p class="font-weight-bold">Total</p>
+                                    <span>6,666</span>
+                                </div>
+                                
+                            </li>
+                            <li class="list-group-item rText">
+                                <img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=T" class="rounded float-left mr-2">
+                                <div>
+                                    <p class="font-weight-bold">Detail</p>
+                                    <span><i class="far fa-clock pr-1"></i>2018/6/13  13:42</span>
+                                    <span><i class="far fa-user pr-1"></i>Tommy</span>
+                                </div>
+                                <div>
+                                    <p class="font-weight-bold">Total</p>
+                                    <span>8,888</span>
+                                </div>
+                                
+                            </li>
+                        </ul>
+                        <!-- <h5 class="p-3"></h5>
+                        <div>123123123</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section 3 -->
+        <div></div>
+        <span class="badge badge-warning fixed-bottom count"></span>
+        <div class="badge badge-info info">界接資料：https://coinmarketcap.com/<br/>[每五分鐘更新一次]</div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <script src="js/chart.js"></script>
+    <script>
+        var homeUrl = "home.html";
+        var orderUrl = "orders.html";
+        var href = homeUrl;
+        // console.log(homeUrl);
+        $("#navBar li").click(function(){
+            var i = $(this).index();
+            switch (i) {
+                case 0:
+                    console.log("0");
+                    location.href = "index.html";
+                    $("#navBar li:nth(0)").addClass("active");
+                    $("#navBar li:nth(1)").removeClass("active");
+                    // ajaxPage(href);
+                    return;
+                case 1:
+                    console.log("1");
+                    href = orderUrl;
+                    $("#navBar li:nth(1)").addClass("active");
+                    $("#navBar li:nth(0)").removeClass("active");
+                    ajaxPage(href);
+                    return;
+
+                case 2:
+                    console.log("2");
+                    href = "javascript:;";
+                    return;
+            }
+        });
+        function ajaxPage(href){
+            $.ajax({
+                url: href,
+                type: "GET",
+                success: function(data) {
+                    $('#pageContainer').html(data);
+                    // console.log(data);
+                    // data = data;
+                    // parseJSON = $.parseJSON(data);
+                },
+                error: function(data) {
+                    // console.log(data);
+                },
+                complete:function(data){
+                    // console.log(data);
+                }
+            });    
+        }
+        // ajaxPage(href);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+	body{
+		min-width: 320px;
+		overflow-x: hidden;
+	}
+	.sec1 {
+	    margin-top: 6.333%;
+	}
+
+	.tab-active {
+	    border-bottom: 2px solid white;
+	}
+	.commont p {
+	    color: #bdbdbd;
+	    padding: 0 0.57rem 0 0;
+	    display: flex;
+	    align-items: center;
+	    margin: 0;
+	}
+	.commont p i {
+	    padding: 0 0.75rem 0 0;
+	    font-size: 0.95rem;
+	}
+
+	.commont {
+	    padding: 0 0.75rem;
+	    font-size: 1rem;
+	    display: inline-flex;
+	}
+
+	.font-yellow {
+	    color: #F5A623;
+	}
+
+	.font-pink {
+	    color: #ff8a80;
+	}
+	.btnArea{
+
+	}
+	.ppink{
+		background-color: #ff8a80;
+	}
+	.ppink:focus, .ppink:hover{
+		background-color: #ff5252;
+	}
+	.lpink{
+		background-color: #Fff;
+		color: #ff3d00;
+	}
+	.lpink:focus, .lpink:hover{
+		background-color: #fafafa;		
+		color: #ff6e40;
+	}
+

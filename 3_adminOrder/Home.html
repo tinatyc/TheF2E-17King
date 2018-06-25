@@ -1,0 +1,135 @@
+<div class="container">
+    <div class="row my-3 justify-content-between">
+        <h3>OVERVIEW</h3>
+    <!-- 秒數 -->
+    <div id="selectSec" class="btn-group btn-group-sm">
+        <button id="fiveMin" type="button" class="btn btn-outline-secondary active" >5分鐘</button>
+        <button id="oneMin" type="button" class="btn btn-outline-secondary">1分鐘</button>
+        <button id="thirtySec" type="button" class="btn btn-outline-secondary">5秒鐘</button>
+    </div>
+    </div>
+    <!-- 秒數 -->
+    <!-- label -->
+</div>
+<!-- section 1 -->
+<div class="container">
+    <div class="row my-3">
+        <div class="col-4">
+            <div class="border text-center box1">
+                <h6 class="my-2"><i class="fas fa-chart-bar"></i> BitCoin USD</h6>
+                <p class="box1-text text-success" id="btc_text">---</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="border text-center box1">
+                <h6 class="my-2"><i class="fas fa-money-bill"></i> ETH USD</h6>
+                <p class="box1-text text-danger" id="eth_text">---</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="border text-center box1">
+                <h6 class="my-2"><i class="fas fa-dollar-sign"></i> Dash USD</h6>
+                <p class="box1-text text-primary" id="dash_text">---</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- section 1 -->
+<!-- section 2 -->
+<div class="container">
+    <div class="row my-3">
+        <div class="col-12">
+            <div class="border bg-white">
+                <div class="s2">
+                    <h5 class="my-4 mx-4">Watchlists</h5>
+                    <span class="pr-2 update">Last Update:</span>
+                </div>
+                <div id="chart" class="p-1 border">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- section 2 -->
+<!-- section 3 -->
+<div class="container mb-3">
+    <div class="row">
+        <div class="col-6">
+            <div class="border bg-white">
+                <ul class="list-group list-group-flush p-3 list">Volume Change
+                    <li class="list-group-item">
+                        <i class="fab fa-btc"></i>
+                        <span id="btc_name" class="crytponame">---</span>
+                        <span id="btc_24volume" class="">---</span>
+                        <span id="btc_1h" class="persent">---</span>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fab fa-ethereum"></i>
+                        <span id="eth_name" class="crytponame">---</span>
+                        <span id="eth_24volume" class="">---</span>
+                        <span id="eth_1h" class="persent">---</span>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span id="dash_name" class="crytponame">---</span>
+                        <span id="dash_24volume" class="">---</span>
+                        <span id="dash_1h" class="persent">---</span>
+                    </li>
+                </ul>
+                <!-- <h5 class="p-3"></h5>
+                <div>123123123</div> -->
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="border bg-white">
+                <ul class="list-group list-group-flush p-3"><h5>Trade Volume</h5>
+                    <li class="list-group-item rText">
+                        <img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=A" class="rounded float-left mr-2">
+                        <div>
+                            <p class="font-weight-bold">Detail</p>
+                            <span><i class="far fa-clock pr-1"></i>2018/6/13  13:42</span>
+                            <span><i class="far fa-user pr-1"></i>Alex</span>
+                        </div>
+                        <div>
+                            <p class="font-weight-bold">Total</p>
+                            <span>7,777</span>
+                        </div>
+                        
+                    </li>
+                    <li class="list-group-item rText">
+                        <img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=A" class="rounded float-left mr-2">
+                        <div>
+                            <p class="font-weight-bold">Detail</p>
+                            <span><i class="far fa-clock pr-1"></i>2018/6/13  13:42</span>
+                            <span><i class="far fa-user pr-1"></i>Amos</span>
+                        </div>
+                        <div>
+                            <p class="font-weight-bold">Total</p>
+                            <span>6,666</span>
+                        </div>
+                        
+                    </li>
+                    <li class="list-group-item rText">
+                        <img src="https://api.fnkr.net/testimg/100x100/00CED1/FFF/?text=T" class="rounded float-left mr-2">
+                        <div>
+                            <p class="font-weight-bold">Detail</p>
+                            <span><i class="far fa-clock pr-1"></i>2018/6/13  13:42</span>
+                            <span><i class="far fa-user pr-1"></i>Tommy</span>
+                        </div>
+                        <div>
+                            <p class="font-weight-bold">Total</p>
+                            <span>8,888</span>
+                        </div>
+                        
+                    </li>
+                </ul>
+                <!-- <h5 class="p-3"></h5>
+                <div>123123123</div> -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- section 3 -->
+<span class="badge badge-secondary fixed-bottom count"></span>
+<script src="js/chart.js"></script>
+<script src="js/index.js"></script>

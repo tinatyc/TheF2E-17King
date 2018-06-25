@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/king_mark.ico" />
+    <link rel="bookmark" href="img/king_mark.ico" />
+    <title>Pratice. -King Tzeng</title>
+    <style type="text/css" media="screen">
+    /*     	*{
+    		margin: 0;
+    		padding: 0;
+    	}	 */
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: auto;
+        overflow: hidden;
+    }
+
+    body {
+        /* height: 100%; */
+        background-image: url("img/light.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .block {
+        margin: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .title {
+        margin: 10%;
+        text-align: center;
+    }
+
+    .inpmail {
+        width: 50%;
+        height: 10%;
+        margin-top: 10%;
+    }
+    .singUpC{
+    	display: inline-block;
+    	font-weight: 600;
+    	display: inline-block;
+    	font-size: 2em;
+    	margin-top: 5%;
+    }
+    .alert{
+    	color: tomato;
+    }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">你報名前端修練精神時光屋了嗎？</h1>
+    <div class="row block">
+        <h2 class="text-center">輸入E-mail查查看吧! <span class="glyphicon glyphicon-search" aria-hidden="true"></span></h2>
+        <input id="inpMail" class="form-control inpmail" type="email" name="" value="" placeholder="輸入報名的E-mail">
+        <br/>
+        <button type="button" class="btn btn-success" id="btnSend">填好了～送出</button>
+        <div id="singUptotal" class="singUpC"></div>
+        <div class="singUpC">還不趕快跳進來嗎～(☝ ՞ਊ ՞）☝</div>
+    </div>
+    <div class="modal fade" id="modal-id">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">報名狀態</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+    $(function() {
+    	singUpTotal();
+		function singUpTotal(){
+			$.ajax({
+			    url: 'https://www.thef2e.com/api/signUpTotal',
+			    type: "GET",
+			    success: function(data) {
+			    	total = data.total;
+			    	status = data.success;
+			    	if( status = true ){
+			    		console.log(total);
+			    		$("#singUptotal").append("目前有<span class='alert'>"+total+"</span>位大大跳坑了！");
+			    	}
+			    	console.log(data);
+			    },
+			    error: function(data) {
+                    // console.log(data);
+                }
+			});
+		}
+
+        $("#btnSend").click(function() {
+            var strMail = $("#inpMail").val();
+            // var strMail = "tina_tyc@livemail.tw";
+            // console.log(strMail);
+            $.ajax({
+                url: 'https://www.thef2e.com/api/isSignUp',
+                type: "POST",
+                data: {
+                    "email": strMail
+                },
+                success: function(data) {
+                    // console.log(data);
+                    msg = data.message;
+                    status = data.success;
+                    // console.log(status);
+                    if (status == true) {
+                        // console.log(msg);
+                        var status = data.success;
+                        var nickName = data.nickName;
+                        var time = data.timeStamp;
+                        getTime = timeCover(time);
+                        // console.log(getTime);
+                        const Y = getTime.Y;
+                        const Mon = getTime.Mon;
+                        const D = getTime.D;
+                        const H = getTime.H;
+                        const M = getTime.M;
+                        // console.log(Y);
+                        // console.log(Mon);
+                        // console.log(D);
+                        // console.log(H);
+                        // console.log(M);
+                        const dateString = Y +"-"+ Mon +"/"+ D;
+                        const timeString = H +":"+ M;
+                        $(".modal-body").empty();
+                        $(".modal-body").append('<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;&nbsp;' + msg + '</div>');
+                        $(".modal-body").append('<div class="alert alert-warning" role="alert"><h5>報名資訊</h5><p>姓名：' + nickName + '</p><p>日期：' + dateString + '</p><p>時間：' + timeString + '</p></div>');
+                        $("#modal-id").modal('show');
+
+                    } else {
+                        // console.log(msg);
+                        $(".modal-body").empty();
+                        $(".modal-body").append('<div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;&nbsp;' + msg + '</div>');
+                        $("#modal-id").modal('show');
+                    }
+
+                    function timeCover(time) {
+                    	timeStamp = time;
+                        var zoneOffset = 8;
+                        var plus = zoneOffset*60*60*1000;
+                        //這個api的timeStamp回傳沒有時差已求證
+                        //update:20180528 17:29
+                        var addtime = timeStamp ;
+                        // console.log(plus);
+                        // console.log(addtime);
+                        var d = new Date(addtime);
+                        var timeUTC = d.toUTCString();
+                        var timeY = d.getUTCFullYear();
+                        var timeMon = d.getUTCMonth()+1;
+                        var timeD = d.getUTCDate();
+                        var timeH = d.getUTCHours();
+                        var timeM = d.getUTCMinutes();
+                        // fix Zero
+                        var fixZeroUTC = fixZero(timeUTC).toString();
+                        var fixZeroY = fixZero(timeY).toString();
+                        var fixZeroMon = fixZero(timeMon).toString();
+                        var fixZeroD = fixZero(timeD).toString();
+                        var fixZeroH = fixZero(timeH).toString();
+                        var fixZeroM = fixZero(timeM).toString();
+                        
+                        // console.log(fixZeroUTC);
+                        // console.log(fixZeroY);
+                        // console.log(fixZeroMon);
+                        // console.log(fixZeroD);
+                        // console.log(fixZeroH);
+                        // console.log(fixZeroM);
+                        return {
+                        	"Y":fixZeroY,
+                        	"Mon":fixZeroMon,
+                        	"D":fixZeroD,
+                        	"H":fixZeroH,
+                        	"M":fixZeroM
+                        };
+                    }
+                    function fixZero(i) {
+                        if (i < 10) { i = "0" + i }; // add zero in front of numbers < 10
+                        return i;
+                    }
+                },
+                error: function(data) {
+                    // console.log(data);
+                }
+            }); //ajax end
+
+        });
+    });
+    </script>
+</body>
+
+</html>

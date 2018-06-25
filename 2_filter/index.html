@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Filter -King Tzeng</title>
+</head>
+
+<body>
+    <nav class="navbar sticky-top mb-3">
+        <a class="navbar-brand" href="#">
+	    <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+	    17放假去！
+	  </a>
+        <div class="input-group input-group-sm col-sm-12 col-md-8 col-lg-5">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-search"></i></span>
+            </div>
+            <input id="querySearch" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="search">搜尋</button>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <!-- <div class="row justify-content-center"> -->
+        <!-- </div>
+    </div> -->
+        <!-- contant -->
+        <!--     <div class="container"> -->
+        <div class="row">
+            <div class="col-sm-12 col-md-3 left-contant">
+                <h5>進階篩選</h5>
+                <div class="form-group">
+                    <label for="dist_select">地區</label>
+                    <select class="form-control" id="dist_select">
+                    	<!-- <option disabled>-------</option> -->
+                    </select>
+                </div>
+                <div>
+                    <label for="">資料筆數</label>
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">從第</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="這個也還沒有寫完" disabled>
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">筆</span>
+                        </div>
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">到第</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="這個也還沒有寫完" disabled>
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">筆</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for="">分類</label>
+                    <select class="form-control" id="fun_select">
+                    </select>
+                </div>
+                <!-- <button type="button" class="btn btn-primary mt-3" id="search"><i class="fas fa-search"></i> 查詢</button> -->
+            </div>
+            <div class="col-sm-12 col-md-9 right-contant">
+                <div class="col-12 mb-3 prompt">
+                    <p>找到<span id="data_num"> </span> 筆資料喔！</p>
+                    <!--                 </div>
+                <div class="col-12 mb-3 prompt"> -->
+                    <div class="badge-area" id="badgeAlret">
+                        <span class="badge badge-pill border border-warning">還沒有寫標籤> <
+							<button type="button"><span class="badge badge-light">X</span></button>
+                		</span>
+                    </div>
+                </div>
+                <!-- <img class="card-img" src="https://api.fnkr.net/testimg/500x200/00CED1/FFF/?text=img+placeholder"> -->
+                <div class="col-12 card-columns" id="place_res">
+                    <!--               <div class="card mb-3">
+                	  <img class="card-img-top" src="http://khh.travel/FileArtPic.ashx?id=2095&amp;w=1280&amp;h=960">
+                	  <div class="card-body">
+                	    <h5 class="card-title">旗津觀光漁港</h5>
+                	    <p class="card-text text-line3">位於旗津區南汕里的旗津觀光漁港座落在旗津的地理中央位置，包含了紅燈碼頭、觀光漁市及漁港廣場等設施，東側濱臨高雄港主航道，視野遼闊、景緻宏偉，可近覽大小輪船航行雄姿。旗津漁港屬近海小型漁船作業，每日清晨五點起，漁船陸續返港，遊客可以近距離觀賞魚貨拍賣交易時生動熱絡的景象，也可就近在觀光漁市購買最鮮美的海產。漁港廣場同時也是各種漁業推廣活動的最佳地點，秋刀魚試吃、黑鮪魚特賣，往往造成熱烈風潮。旗津觀光漁港東鄰高雄港、西接風車公園及海灘，民眾除了可以盡情採買、品嚐新鮮海鮮和親近港都風景，鄰近的「陽明高雄海洋探索館」，更將廣袤的海洋文化生動呈現，可以一併參觀，將為漁港的吃樂玩樂之旅更增加深度及廣度。</p>
+                	    <p class="card-text">
+                	    	<small class="text-muted"><i class="fas fa-map-marker-alt"></i> 旗津區</small>
+                	    	<small class="text-muted"><i class="far fa-credit-card"></i></small>
+                	    	<small class="text-muted"><i class="fas fa-info-circle"></i> 全天候開放</small>
+                	    </p>
+                	  </div>
+                	</div> -->
+                    <!--                     <div class="card bg-light text-black mb-2">
+                    	<img class="card-img" src="http://khh.travel/FileArtPic.ashx?id=2095&amp;w=1280&amp;h=960">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">旗津觀光漁港</h5>
+                            <p class="card-text text-line3">位於旗津區南汕里的旗津觀光漁港座落在旗津的地理中央位置，包含了紅燈碼頭、觀光漁市及漁港廣場等設施，東側濱臨高雄港主航道，視野遼闊、景緻宏偉，可近覽大小輪船航行雄姿。旗津漁港屬近海小型漁船作業，每日清晨五點起，漁船陸續返港，遊客可以近距離觀賞魚貨拍賣交易時生動熱絡的景象，也可就近在觀光漁市購買最鮮美的海產。漁港廣場同時也是各種漁業推廣活動的最佳地點，秋刀魚試吃、黑鮪魚特賣，往往造成熱烈風潮。旗津觀光漁港東鄰高雄港、西接風車公園及海灘，民眾除了可以盡情採買、品嚐新鮮海鮮和親近港都風景，鄰近的「陽明高雄海洋探索館」，更將廣袤的海洋文化生動呈現，可以一併參觀，將為漁港的吃樂玩樂之旅更增加深度及廣度。</p>
+                            <small class="text-muted info">
+                            	<p><i class="fas fa-map-marker-alt"></i>旗津區</p>
+                            	<p><i class="fas fa-info-circle"></i>全天候開放</p>
+                            	<p><i class="fas fa-dollar-sign"></i>100$</p>
+                            </small>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- row -->
+        <!-- footer -->
+        <div class="row justify-content-center mt-3 footer">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">還沒</a>
+                </li>
+                <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+                <li class="page-item disabled"><a class="page-link" href="#">2</a></li>
+                <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+                <li class="page-item disabled">
+                    <a class="page-link" href="#">寫完</a>
+                </li>
+            </ul>
+        </div>
+        <!-- footer end -->
+    </div>
+    <!-- contant end -->
+    <!-- https://www.pakutaso.com/20171207341post-14404.html -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/Kao_distNum.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

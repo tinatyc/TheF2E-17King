@@ -1,0 +1,115 @@
+html,
+body {
+    background: #F2F2F2;
+}
+
+.box1-text {
+    font-size: 2.5em;
+}
+
+.box1 {
+    background-color: #fff;
+}
+
+#chart {
+    width: 100%;
+    height: 400px;
+}
+
+.s2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.update {
+    align-self: flex-end;
+    color: #b1b1b1;
+    font-size: .5em;
+}
+
+.list {
+    font-size: 1.25rem;
+    font-weight: 500;
+    list-style: none;
+}
+
+.list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list>li>i {
+    font-size: 1.5em;
+}
+
+.list li span {
+    padding-left: 2%;
+}
+
+.crytponame {
+    font-size: 0.8em;
+    color: #9B9B9B;
+}
+
+.persent {
+    color: #7ED321;
+}
+
+.negative {
+    color: #D0021B;
+}
+
+.count {
+    width: 20%;
+    text-align: left;
+    padding-left: 3%;
+}
+
+.rText {
+    font-size: .5em;
+    display: flex;
+    align-items: flex-start;
+}
+
+.fa-btc {
+    color: #f4b62b;
+}
+
+.fa-ethereum {
+    color: #9ba2c9;
+}
+
+.fa-dollar-sign {
+    color: #3875bc;
+}
+
+#selectSec {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: flex-end;
+}
+#selectSec button{
+	padding: 2px;
+	border: 1px solid #ccc;
+	font-weight: 300;
+}
+.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle {
+	background-color:#c6cace;
+}
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0);
+}
+.active{
+	border-bottom: 3px solid #b0b7c5;
+}
+.info{
+	position: fixed;
+	right: 1%;
+	bottom: 1%;
+	opacity: .5;
+}
+/* .btn-outline-secondary{
+	border:1px solid red ;
+} */

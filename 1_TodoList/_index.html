@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="src/css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList -King Tzeng</title>
+    <nav class="nav-extended">
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab tab-active">
+                    <a class="active" href="#test1">My tasks</a>
+                </li>
+                <li class="tab">
+                    <a href="#test2">In Progress</a>
+                </li>
+                <li class="tab">
+                    <a href="#test3">Completed</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container sec1">
+        <div class="row">
+            <form class="col s12">
+                <div class="cell">
+                    <div class="row">
+                        <div class="input-field">
+                            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                            <label for="icon_prefix2">+ Add Task</label>
+                        </div>
+                    </div>
+                    <div class="row dateTime">
+                        <!-- <div class="col s12"> -->
+                        <label class="valign-wrapper">
+                            <i class="material-icons">date_range</i> Deadline
+                        </label>
+                        <input type="date" class="col s6 m4 datepicker">
+                        <input type="time" class="col s6 m4 timepicker">
+                        <div class="col s12 m4 file-field input-field">
+                            <div class="btn ppink">
+                                <span>File</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                    <div class="row comment">
+                        <!-- <div class="col s12"> -->
+                        <label class="valign-wrapper">
+                            <i class="material-icons">chat</i> Comment
+                        </label>
+                        <textarea id="comment_prefix2" class="materialize-textarea"></textarea>
+                        <!-- </div> -->
+                    </div>
+                    <div class="row btnArea">
+                        <button class="btn waves-effect waves-light lpink" type="button" name="action">close
+                            <i class="material-icons left">close</i>
+                        </button>
+                        <button class="btn waves-effect waves-light ppink" type="button" name="action">add
+                            <i class="material-icons left">add</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <ul class="collection">
+                <li class="collection-item">
+                    <p class="col s10">
+                        <label>
+                            <input type="checkbox" />
+                            <span>Title</span>
+                        </label>
+                    </p>
+                    <p class="col s2">
+                        <i class="material-icons font-yellow">star</i>
+                        <i class="material-icons">edit</i>
+                    </p>
+                    <div class="commont">
+                        <p><i class="material-icons">date_range</i>2018-06-05</p>
+                        <p><i class="material-icons">chat</i>2</p>
+                        <p><i class="material-icons">insert_drive_file</i>1</p>
+                        <!-- <i class="material-icons">star_border</i> -->
+                    </div>
+                </li>
+                <li class="collection-item">
+                    <p class="col s10">
+                        <label>
+                            <input type="checkbox" />
+                            <span>Title2</span>
+                        </label>
+                    </p>
+                    <p class="col s2">
+                        <i class="material-icons font-yellow">star</i>
+                        <i class="material-icons">edit</i>
+                    </p>
+                    <div class="commont">
+                        <p><i class="material-icons">date_range</i>2018-06-05</p>
+                        <p><i class="material-icons">chat</i>2</p>
+                        <p><i class="material-icons">insert_drive_file</i>1</p>
+                        <!-- <i class="material-icons">star_border</i> -->
+                    </div>
+                </li>
+                <li class="collection-item">
+                    <p class="col s10">
+                        <label>
+                            <input type="checkbox" />
+                            <span>Title3</span>
+                        </label>
+                    </p>
+                    <p class="col s2">
+                        <i class="material-icons">star_border</i>
+                        <i class="material-icons">edit</i>
+                    </p>
+                    <div class="commont">
+                        <p><i class="material-icons">date_range</i>2018-06-05</p>
+                        <p><i class="material-icons">chat</i>2</p>
+                        <p><i class="material-icons">insert_drive_file</i>1</p>
+                        <!-- <i class="material-icons">star_border</i> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <blockquote>
+                4 tasks left
+            </blockquote>
+        </div>
+    </div>
+</head>
+
+<body>
+    <script type="text/javascript" src="src/js/materialize.js"></script>
+</body>
+
+</html>

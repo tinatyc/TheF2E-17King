@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		$(function(){
+			
+			// var limit = new Number(null);
+			// var offset = new Number(null);
+			var jsonSelect = "Zone";
+			var keyword = "旗津區";
+			var q = '{"'+jsonSelect+'":"'+keyword+'"}';
+			console.log(q);
+			// var PostStr = ;
+			// console.log(PostStr);
+			// var PostStr = {"offset":offset, "q":q};
+			var url_ = "https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97&q="+q+"";
+			$.ajax({
+			    url: url_,
+			    type: "POST",
+			    // data:{"QAQ":q},
+			    success: function(data) {
+			        // console.log(data);
+			        data = data;
+			        console.log(data);
+			        // parseJSON = $.parseJSON(data);
+			        dataStatus = data.success;
+			        // console.log(parseJSON);
+			        // console.log(typeof(dataStatus));
+			        if(dataStatus ===true){
+			        	dataDetail = data.result.records;
+
+			        	console.log(dataDetail);
+			        }else{
+			        	console.log("API Error");
+			        }
+			        // $("body").append(parseJSON);
+			        
+			    },
+			    error: function(data) {
+			        console.log(data);
+			    },
+			    complete:function(data){
+			    	console.log(data);
+			    }
+			});
+				
+		});
+	</script>
+</body>
+</html>

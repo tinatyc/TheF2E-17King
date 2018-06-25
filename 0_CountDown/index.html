@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>Pratice2. -King Tzeng</title>
+</head>
+<body>
+	<h1>The F2E - 前端修練精神時光屋</h1>
+	<h2>離進屋時間尚有</h2>
+	<div>
+		<p>DAY:<span id="day"></span></p>
+		<p>Time:<span id="Time"></span></p>
+		<p>MM:<span id="MM"></span></p>
+		<p>SS:<span id="SS"></span></p>
+	</div>
+	<h2>開始修煉！</h2>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		$(function(){
+			diffTime();
+			setInterval(function(){
+				diffTime();
+			}, 1000);
+
+			function diffTime(){
+				deadLine();
+				getNow();
+				diffD = (deadLineD - nowD) + 31 - 1;
+				diffT = (deadLineT - nowT) + 23;
+				diffm = (deadLinem - nowm) + 59;
+				diffS = (deadLineS - nowS) + 59;
+				// console.log(diffD);
+				// console.log(Math.abs(diffT));
+				// console.log(diffm);
+				// console.log(diffS);
+				$("#day").text(Math.abs(diffD));
+				$("#Time").text(Math.abs(diffT));
+				$("#MM").text(Math.abs(diffm));
+				$("#SS").text(Math.abs(diffS));
+			}
+			function deadLine(){
+				// deadLineT = new Date();
+				deadLineD = 4;
+				deadLineT = 12;
+				deadLinem = 0;
+				deadLineS = 0;
+				// console.log(typeof(deadLineD));
+				// console.log(deadLineD);
+				// console.log(deadLineT);
+				// console.log(deadLinem);
+				// console.log(deadLineS);
+
+			}
+			/**
+			 * [getNow get now time]
+			 * 
+			 */
+			function getNow(){
+				now = new Date();
+				nowD = now.getDate();
+				nowT = now.getHours();
+				nowm = now.getMinutes();
+				nowS = now.getSeconds();
+				// console.log(typeof(nowD));
+				// console.log(nowT);
+				// console.log(nowm);
+				// console.log(nowS);
+			}
+
+			function checkDay(i) {
+			    if (i < 10) {
+			        i = "0" + i
+			    };
+			    return i;
+			}
+		});
+	</script>
+</body>
+</html>
