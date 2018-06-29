@@ -1,0 +1,473 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+html,
+body {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+body {
+    min-width: 320px;
+    margin: 3%;
+    height: 200vw;
+    font-family: 'Noto Sans TC', sans-serif;
+    /* overflow-x: hidden; */
+    /* font-family: 'Noto Sans', sans-serif; */
+}
+
+.container {
+    position: relative;
+    height: 100vw;
+    width: 100%;
+}
+
+.title {
+    display: flex;
+    width: calc(100%);
+    /* border: 1px solid red; */
+    /* position: relative; */
+    justify-content: center;
+    color: #fff;
+    font-size: .5em;
+    font-weight: 900;
+    text-align: center;
+}
+
+.title::after {
+    position: absolute;
+    content: " ";
+    border: 1px solid #25240e;
+    width: 100%;
+    height: 1.5em;
+    background: #000;
+    width: calc(100%/4);
+    z-index: -1;
+}
+
+.subtitle {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 3.5em;
+    font-weight: 900;
+}
+
+.box {
+    /* border: 1px solid green; */
+    /* width: calc(100vw/2); */
+    position: absolute;
+    /* height: 100%; */
+    /* color: #8f918e; */
+    color: #000;
+    text-shadow: 1px 1px 3px #353535db, 0px -10px #b1b1b19c, 0px -20px #d8d8d89c;
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.box1 {
+    /* border: 1px solid green; */
+    top: 20%;
+    height: 40%;
+    width: calc((100%/8)*4);
+    background-image: url("../img/AMOS8.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    line-height: 0;
+}
+
+.box1:before {
+    content: "01";
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    width: 40%;
+    height: 20%;
+    /* border: 1px solid red; */
+    background-image: linear-gradient(143deg, #fff0 0%, #fff0 10%, #50E3C2 10%, #50E3C2 20%, #fff0 20%, #fff0 30%, #50E3C2 30%, #50E3C2 40%, #fff0 40%, #fff0 50%, #50E3C2 50%, #50E3C2 60%, #fff0 60%, #fff0 70%, #50E3C2 70%, #50E3C2 80%, #fff0 80%, #fff0 90%, #50E3C2 90%, #50E3C2 100%, #fff0 100%);
+    background-size: 150%;
+    background-position: 0;
+    background-repeat: repeat-x;
+    animation: csscoke1 .5s linear infinite;
+    color: rgba(255, 255, 255, 0);
+    text-shadow: calc((100vw/20)*-1) calc((100vw/8)*0.5) 0px black;
+}
+
+.box1:after {
+    content: "垂直置中的勇氣";
+    position: absolute;
+    color: rgba(255, 255, 255, 0);
+    top: -15%;
+    right: -15%;
+    width: 40%;
+    height: 40%;
+    border: 20px solid #4fe3c2;
+    z-index: -1;
+    transform: rotate(90deg);
+    font-size: calc((100vw/20)*0.4);
+    text-shadow: calc((100vw/20)*7) calc((100vw/8)*0.2) 0px black;
+    font-style: italic;
+    /* border: 1px solid red; */
+}
+
+.box2 {
+    /* border: 1px solid green; */
+    top: 30%;
+    right: calc((100%/8)*1);
+    width: calc((100%/8)*2);
+    height: 20%;
+    background-image: url("../img/AMOS4.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #eee;
+    line-height: calc((100vw/10)*4.5);
+    text-align: right;
+}
+
+.box2:before {
+    content: "CSS COKE";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #4fe3c2;
+    top: -20%;
+    right: -20%;
+    z-index: -1;
+    color: rgba(255, 255, 255, 0);
+    font-size: calc((100vw/20)*0.5);
+    text-shadow: calc((100vw/8)*-1.5) calc((100vw/10)*-2) 0px black;
+    font-style: italic;
+}
+
+.box2:after {
+    content: "02";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border: 20px solid #4fe3c2;
+    top: -40%;
+    right: -40%;
+    z-index: -2;
+    color: rgba(255, 255, 255, 0);
+    font-size: calc((100vw/20)*0.5);
+    text-shadow: calc((100vw/8)*0.1) calc((100vw/10)*-2.3) 0px black;
+}
+
+.box3 {
+    /* border: 1px solid green; */
+    top: 80%;
+    width: calc((100%/8)*4);
+    height: 20%;
+    background-image: url("../img/beef.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    text-align: left;
+    font-size: calc((100vw/20)*0.5);
+    color: #000;
+    text-shadow: calc((100vw/8)*0) calc((100vw/10)*-2.3) 0px #fff0;
+    line-height: 17;
+    font-style: italic;
+}
+
+.box3:before {
+    content: "Look This Beef";
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    /* border: 1px solid red; */
+    top: -20%;
+    left: 0;
+    background-image: linear-gradient(90deg, #50E3C2 0%, #50E3C2 50%, #fff0 50%, #fff0 100%);
+    z-index: -1;
+    text-shadow: 1px 1px 3px #353535db, 0px -10px #b1b1b19c, 0px -20px #d8d8d89c;
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 0.5;
+    text-align: right;
+    font-style: normal;
+}
+
+.box3:after {
+    content: "03";
+    position: absolute;
+    width: 40%;
+    height: 85%;
+    border: 20px solid #4fe3c2;
+    top: 20%;
+    right: -10%;
+    z-index: -1;
+    line-height: 1;
+    /* text-align: right; */
+    text-shadow: calc((100vw/8)*1.35) calc((100vw/20)*3.25) 0px #000;
+    font-style: normal;
+}
+
+.box4 {
+    /* border: 1px solid green; */
+    top: 80%;
+    right: 0;
+    width: calc((100%/8)*2);
+    height: 35%;
+    background-image: url("../img/AMOS3.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    writing-mode: vertical-lr;
+    line-height: 0;
+    color: #0000;
+    text-shadow: 0px -20px 0px #353535db, 0px -28px #b1b1b1d4, 0px -35px #e8e8e89c;
+}
+
+.box4:before {
+    content: "04";
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    width: 100%;
+    height: 20%;
+    /* border: 1px solid red; */
+    background-image: linear-gradient(143deg, #fff0 0%, #fff0 10%, #50E3C2 10%, #50E3C2 20%, #fff0 20%, #fff0 30%, #50E3C2 30%, #50E3C2 40%, #fff0 40%, #fff0 50%, #50E3C2 50%, #50E3C2 60%, #fff0 60%, #fff0 70%, #50E3C2 70%, #50E3C2 80%, #fff0 80%, #fff0 90%, #50E3C2 90%, #50E3C2 100%, #fff0 100%);
+    background-size: 150%;
+    background-position: 0;
+    background-repeat: repeat-x;
+    animation: csscoke2 .5s linear infinite;
+    color: rgba(255, 255, 255, 0);
+    text-shadow: calc((100vw/20)*-1.25) calc((100vw/8)*0.125) 0px black;
+    writing-mode: horizontal-tb;
+}
+
+.box4:after {
+    content: "啊捏巴豆么啦";
+    position: absolute;
+    width: 65%;
+    height: 45%;
+    border: 20px solid #4fe3c2;
+    top: -25%;
+    left: -25%;
+    /* z-index: -1; */
+    line-height: 0;
+    /* text-align: right; */
+    text-shadow: calc((100vw/8)*-0.75) calc((100vw/20)*-0.5) 0px #000;
+    font-style: normal;
+    font-size: calc((100vw/20)*0.5);
+    color: rgba(255, 255, 255, 0);
+    transform: rotate(90deg);
+    font-style: italic;
+    z-index: -1;
+    writing-mode: horizontal-tb;
+}
+
+.box5 {
+    /* border: 1px solid green; */
+    top: 120%;
+    width: calc((100%/8)*4);
+    height: 20%;
+    left: calc((100%/8)*0);
+    background-image: url("../img/AMOS2.jpg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center right;
+    /* vertical-align: middle; */
+    display: flex;
+    align-items: center;
+}
+
+.box5:before {
+    content: "Vertical Align";
+    position: absolute;
+    top: -20%;
+    left: 20%;
+    width: 50%;
+    height: 50%;
+    /* border: 1px solid red; */
+    background-image: linear-gradient(143deg, #fff0 0%, #fff0 10%, #50E3C2 10%, #50E3C2 20%, #fff0 20%, #fff0 30%, #50E3C2 30%, #50E3C2 40%, #fff0 40%, #fff0 50%, #50E3C2 50%, #50E3C2 60%, #fff0 60%, #fff0 70%, #50E3C2 70%, #50E3C2 80%, #fff0 80%, #fff0 90%, #50E3C2 90%, #50E3C2 100%, #fff0 100%);
+    background-size: 150%;
+    background-position: 0;
+    background-repeat: repeat-x;
+    animation: csscoke3 .5s linear infinite;
+    color: rgba(255, 255, 255, 0);
+    text-shadow: calc((100vw/20)*7.5) calc((100vw/8)*0.25) 0px black;
+    font-size: calc((100vw/20)*0.5);
+    z-index: -1;
+    font-style: italic;
+}
+
+.box5:after {
+    content: "05";
+    position: absolute;
+    width: 45%;
+    height: 20%;
+    border: 20px solid #4fe3c2;
+    top: 80%;
+    left: 25%;
+    /* z-index: -1; */
+    line-height: 0;
+    /* text-align: right; */
+    text-shadow: calc((100vw/8)*-0.1) calc((100vw/20)*-0.1) 0px #000;
+    font-style: normal;
+    font-size: calc((100vw/20)*0.5);
+    color: rgba(255, 255, 255, 0);
+    z-index: -1;
+}
+
+.box6 {
+    border: 1px solid green;
+    top: 140%;
+    width: calc((100%/8)*4);
+    height: 43%;
+    right: 0;
+    background-image: url("../img/salt_amos.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    text-shadow: 0px -50px 0px #353535db, 0px -65px #b1b1b1d4, 0px -70px #e8e8e89c;
+    color: #fff0;
+    text-align: right;
+}
+
+.box6:before {
+    content: "06";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: #4fe3c2;
+    bottom: 0%;
+    left: -10%;
+    z-index: -1;
+    color: rgba(255, 255, 255, 0);
+    font-size: calc((100vw/20)*0.7);
+    text-shadow: calc((100vw/8)*-1.5) calc((100vw/10)*-0.4) 0px black;
+}
+
+.box6:after {
+    content: "HOLY CRAP";
+    position: absolute;
+    width: 91.5%;
+    height: 20%;
+    border: 20px solid #4fe3c2;
+    bottom: -10.5%;
+    right: 0;
+    z-index: -1;
+    line-height: 1;
+    text-align: center;
+    text-shadow: calc((100vw/8)*-0) calc((100vw/20)*1.25) 0px #000;
+    font-style: italic;
+    font-size: calc((100vw/20)*0.5);
+}
+
+.box7 {
+    /* border: 1px solid green; */
+    top: 160%;
+    width: calc((100%/8)*2);
+    height: 40%;
+    left: 0;
+    background-image: url("../img/AMOS6.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    writing-mode: tb-rl;
+    color: #fff0;
+    text-shadow: 60px 0px 0px #353535db, 75px 0px #b1b1b1d4, 80px 0px #e8e8e89c;
+}
+
+.box7:before {
+    content: "AMOS";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #4fe3c2;
+    bottom: 0%;
+    right: -40%;
+    z-index: -1;
+    color: rgba(255, 255, 255, 0);
+    font-size: calc((100vw/20)*0.7);
+    text-shadow: calc((100vw/8)*1.65) calc((100vw/10)*1.6) 0px black;
+    writing-mode: horizontal-tb;
+}
+
+.box7:after {
+    content: "THANK MY SEAFOOD";
+    position: absolute;
+    width: 84%;
+    height: 64%;
+    border: 20px solid #4fe3c2;
+    top: -10.5%;
+    right: -40%;
+    z-index: -1;
+    /* line-height: 1; */
+    text-align: left;
+    text-shadow: calc((100vw/8)*-.6) calc((100vw/20)*-1) 0px #000;
+    font-style: italic;
+    font-size: calc((100vw/20)*0.5);
+    writing-mode: horizontal-tb;
+}
+
+.cssSnow {
+	position: absolute;
+	top: 15%;
+	left: 5%;
+	color: #fbfbfbf7;
+	text-shadow: 0px 0px 20px #f3f3f3;
+	font-size: 0.5em;
+	font-weight: 400;
+	text-align: center;
+	width: 50%;
+	/* border: 1px solid; */
+	animation:
+	rotateOutDownLeft 2s linear infinite;
+
+}
+
+@keyframes csscoke1 {
+    0% {
+        background-position: 90% 90%;
+    }
+    100% {
+        background-position: 0% 90%;
+    }
+}
+
+@keyframes csscoke2 {
+    0% {
+        background-position: 0% 90%;
+    }
+    100% {
+        background-position: 75% 90%;
+    }
+}
+
+@keyframes csscoke3 {
+    0% {
+        background-position: 75% 90%;
+    }
+    100% {
+        background-position: 0% 90%;
+    }
+}
+@keyframes rotateOutDownLeft {
+  0% {
+    transform-origin:center;
+    opacity: 1;
+  }
+  25%{
+    transform-origin:center;
+    transform:translate(0, 2em) rotate(35deg);
+    opacity: .8;
+  }
+  50%{
+    transform-origin:center;
+    transform:translate(0em, 4em) rotate(45deg);
+    opacity: .6;
+  }
+  75%{
+    transform-origin:center;
+    transform:translate(0, 6em) rotate(35deg);
+    opacity: .4;
+  }
+  100%{
+    transform-origin:center;
+    transform:translate(0em, 8em)rotate(20deg);
+    opacity: 0;
+  }
+}
