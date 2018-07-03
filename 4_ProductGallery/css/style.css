@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
 html,
 body {
     margin: 0;
@@ -11,7 +11,7 @@ body {
     min-width: 320px;
     margin: 3%;
     height: 200vw;
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Noto Sans TC', Microsoft JhengHei, sans-serif;
     /* overflow-x: hidden; */
     /* font-family: 'Noto Sans', sans-serif; */
 }
