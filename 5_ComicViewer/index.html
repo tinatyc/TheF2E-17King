@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <title>Comic Viewer-King Tzeng</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <h1>Comicomic</h1>
+        </nav>
+        <div class="block center">
+            <div class="left">
+                <!-- <img src="https://api.fnkr.net/testimg/300x400/00CED1/FFF/?text=img+placeholder"> -->
+                <!-- <img src="img/ALEX.png" alt="" class="comicomicImg"> -->
+            </div>
+            <div class="right">
+                <div class="rTitle">
+                    <p>你 的 j Q</p>
+                </div>
+                <div class="rIntroduction">
+                    <ul class="IntroClass">
+                        <li>Genres</li>
+                        <li>Author</li>
+                        <li>Status</li>
+                        <li>Rate</li>
+                    </ul>
+                    <ul class="IntroDescribe">
+                        <li>fantasy/hot blood/magic</li>
+                        <li>AlexOtakuWhat</li>
+                        <li>3.0.1</li>
+                        <li>★★★★★</li>
+                    </ul>
+                </div>
+                <div class="rSummary">
+                    <h4>Summary</h4>
+                    <p>
+                        大家好我是 Alex ，這個頻道主要記錄與直播平常生活的事，不外乎打打電動，寫寫網站，聊天打屁敗家。
+                        <br/>直播時間：
+                        <br>每週一晚上十點直播：遊戲
+                        <br>每週三晚上十點直播：網頁開發分享
+                        <br>粉絲團專頁：https://www.facebook.com/AlexOtakuWhat/
+                        <br>社團討論區：https://www.facebook.com/groups/AlexOtakuWhat/</p>
+                </div>
+            </div>
+        </div>
+        <div class="block bottom">
+            <div class="bottomContainer">
+                <h3 class="ChapterTag">All Chapters</h3>
+                <div class="ChapterContain">
+                    <div class="ChapterList">
+                        <h5>Chapter 1：</h5>我要當上！前 端 王 ！
+                    </div>
+                    <div class="ChapterList">
+                        <h5>Chapter 2：</h5>我把寶藏都放在Alex宅幹嘛了！自己去找吧！<span class="newTag">New</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".ChapterList").click(function(){
+                location.href = "reading.html";
+            });
+        });
+    </script>
+</body>
+</html>
