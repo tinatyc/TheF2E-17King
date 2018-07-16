@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Validation-King Tzeng</title>
+</head>
+
+<body>
+    <div class="container">
+        <hr class="bg-warning">
+        <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h1 class="text-center mt-4">Payment Method</h1>
+        <h2 class="text-center">Add your credit card infomation! </h2>
+        <form>
+            <div class="row s1">
+                <div class="form-group col-12">
+                    <label for="name">Card Number</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control costom-append" id="card" placeholder="1234 5678 9012 3456">
+                        <div class="input-group-append">
+                            <span class="input-group-text custom-visa"><i class="fab fa-cc-visa"></i></span>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row s2">
+                <div class="form-group col-6">
+                    <label for="cardName">Cardholder Name</label>
+                    <input type="text" class="form-control" id="cardName" placeholder="EXAMPLE NAME">
+                </div>
+                <div class="form-group col-6">
+                    <label for="bankName">Bank Name</label>
+                    <input type="text" class="form-control" id="bankName" placeholder="EXAMPLE BANK">
+                </div>
+            </div>
+            <div class="row s3">
+                <div class="form-group col-4">
+                    <label for="birthYYYY">CVV</label>
+                    <input type="number" class="form-control" id="birthYYYY" placeholder="123">
+                </div>
+                <div class="form-group col-4">
+                    <label for="exYear">Expire Year</label>
+                    <input type="date" class="form-control" id="exYear" placeholder="Expire Year">
+                </div>
+                <div class="form-group col-4">
+                    <label for="exMonth">Expire Month</label>
+                    <input type="date" class="form-control" id="exMonth" placeholder="Expire Month">
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary btn-block" id="payBtn">NEXT</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+    $(function() {
+        $("#payBtn").click(function(){
+            location.href = "Done.html";
+        });
+    });
+    </script>
+</body>
+
+</html>

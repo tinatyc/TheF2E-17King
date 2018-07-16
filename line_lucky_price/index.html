@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-grid.css">
+</head>
+<body>
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th scope="col">#</th>
+	      <th scope="col">price</th>
+	      <th scope="col">count</th>
+	      <th scope="col">percent</th>
+	    </tr>
+	  </thead>
+	  <tbody id="tbody">
+	    <!-- <tr>
+	      <th scope="row">1</th>
+	      <td>Mark</td>
+	      <td>Otto</td>
+	      <td>@mdo</td>
+	    </tr>
+	    <tr>
+	      <th scope="row">2</th>
+	      <td>Jacob</td>
+	      <td>Thornton</td>
+	      <td>@fat</td>
+	    </tr> -->
+	  </tbody>
+	</table>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+			var luckyData;
+			var URL = "get.php";
+			$.ajax({
+			    url: URL,
+			    type: "GET",
+			    success: function(d) {			        
+			        luckyData = d;
+			        console.log(luckyData);
+			        parseJSON = $.parseJSON(luckyData);
+			        luckyArray = parseJSON.result.data;
+			        luckyArray.forEach(function(dataNum , i){
+			        	console.log(i);
+			        	price = dataNum.price;
+			        	count = dataNum.count;
+			        	percent = dataNum.percent*100;
+			        	percentP = percent.toFixed(2);
+			        	$("#tbody").append('<tr><th scope="'+i+'">'+i+'</th><td>'+price+'</td><td>'+count+'</td><td>'+percentP+'%</td></tr>')
+			        	// console.log(price);
+			        	// console.log(count);
+			        	// console.log(percent);
+			        });
+			        console.log(parseJSON);
+			        console.log(luckyArray);
+			    },
+			    error: function(d) {
+			        console.log(data);
+			    },
+			    complete:function(d){
+			    	// console.log(data);
+			    }
+			});
+				
+			
+		});
+	</script>
+	
+</body>
+</html>

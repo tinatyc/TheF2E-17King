@@ -1,0 +1,26 @@
+[{
+"DPID": "d9ea6131-9f91-4100-8607-717095df89e7",
+"DPName": "尼伯特颱風",
+"CaseID": "02373bed-8ca2-4e63-bcf8-886a6f9edaca",
+"CaseTime": "2016-07-07T16:44:52",
+"PName": "民生、基礎設施災情",
+"CaseLocationDistrict": "松山區",
+"CaseLocationDescription": "南京東路五段 250 巷 18 弄 1 號",
+"CaseDescription": "路燈上之纜線垂落,請清除以免掉落造成危險。",
+"CaseComplete": true,
+"Wgs84X":121.566231,
+"Wgs84Y":25.0503178
+},{
+"DPID": "d9ea6131-9f91-4100-8607-717095df89e7",
+"DPName": "尼",
+"CaseID": "02373bed-8ca2-4e63-bcf8-886a6f9edaca",
+"CaseTime": "2016-07-07T16:44:52",
+"PName": "民生、基礎設施災情",
+"CaseLocationDistrict": "松山區",
+"CaseLocationDescription": "南京東路五段 250 巷 18 弄 1 號",
+"CaseDescription": "路燈上之纜線垂落,請清除以免掉落造成危險。",
+"CaseComplete": true,
+"Wgs84X":121.537186,
+"Wgs84Y":25.0523815
+}
+]

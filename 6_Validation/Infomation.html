@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Validation-King Tzeng</title>
+</head>
+
+<body>
+    <div class="container">
+        <hr class="bg-warning">
+        <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h1 class="text-center mt-4">General Infomation</h1>
+        <h2 class="text-center">Tell us who you are!</h2>
+        <form>
+
+            <div class="row s1">
+                <div class="form-group col-6">
+                    <h6><label for="name">Name <small>(optional)</small></label></h6>
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="example@email.com">
+                </div>
+                <div class="form-group col-6">
+                    <h6><label for="phone">Phone*<small>(optional)</small></label></h6>
+                    <input type="tel" class="form-control" id="phone" placeholder="Phone">
+                </div>
+            </div>
+            <h6>Birth Date <small>(optional)</small></h6>
+            <div class="row s2">
+                <div class="form-group col-4">
+                    <label for="birthYYYY">Year</label>
+                    <input type="date" class="form-control" id="birthYYYY" placeholder="Comfirm Password">
+                </div>
+                <div class="form-group col-4">
+                    <label for="birthMM">month</label>
+                    <input type="date" class="form-control" id="birthMM" placeholder="Comfirm Password">
+                </div>
+                <div class="form-group col-4">
+                    <label for="birtDD">Date</label>
+                    <input type="date " class="form-control" id="birtDD" placeholder="Comfirm Password">
+                </div>
+                
+            </div>
+            <h6>Address*</h6>
+            <div class="row s3">
+                <div class="form-group col-6">
+                    <label for="birthYYYY">City</label>
+                    <input type="date" class="form-control" id="birthYYYY" placeholder="Comfirm Password">
+                </div>
+                <div class="form-group col-6">
+                    <label for="birthMM">Dist</label>
+                    <input type="date" class="form-control" id="birthMM" placeholder="Comfirm Password">
+                </div>
+                <div class="form-group col-12">
+                    <label for="birtDD">Address Detail</label>
+                    <input type="date " class="form-control" id="birtDD" placeholder="Comfirm Password">
+                </div>
+            </div>
+            
+            <button type="button" class="btn btn-primary btn-block" id="giBtn">NEXT</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+    $(function() {
+        $("#giBtn").click(function(){
+            location.href = "UPP.html";
+        });
+    });
+    </script>
+</body>
+
+</html>

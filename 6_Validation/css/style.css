@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+html, body{
+	width: 100%;
+	height: 100%;
+	font-family:'Noto Sans TC', Microsoft JhengHei, Helvetica, Arial, sans-serif;
+}
+body{
+	padding-top: 2%;
+}
+h1, h2{
+	font-weight: 900;
+	font-family: 'Amatic SC', cursive,'Noto Sans TC', Microsoft JhengHei, Helvetica, Arial, sans-serif;
+}
+.line{
+	height: 10px;
+	width: 100%;
+}
+/* .s2{
+	display: flex;
+
+} */
+.custom-file-label{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	height: calc(10rem);
+	padding:0.375rem 0.75rem;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	border: 1px solid #ced4da;
+	border-radius: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #9B9B9B;
+	border: 2px solid #000;
+}
+.custom-file-label::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    height: calc(calc(2.25rem + 2px) - 1px * 2);
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    color: #495057;
+    content: "";
+    background-color: #fff;
+    border-left: 0px solid #ced4da;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+.left{
+	flex-direction: column;
+	display: flex;
+}
+.fa-images{
+	font-size: 3rem;
+	padding-right: 1.5rem;
+}
+.custom-file{
+	height: calc(10rem);
+	margin-bottom: 2%;
+}
+.custom-visa{
+	display: flex;
+	align-items: center;
+	padding: 0.375rem 0.75rem;
+	margin-bottom: 0;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #495057;
+	text-align: center;
+	white-space: nowrap;
+	background-color: #FFF;
+	border: 0px solid #ced4da;
+	border-radius: 0.25rem;
+	border-left: 0px solid;
+}
+/* #card{
+	
+} */
+.costom-append{
+	border-right: 0px solid;
+}
+.tommyImg{
+	width: 75%;
+}
+.sp-text{
+	font-size: 1.5em;
+	font-weight: 600;
+	font-style: italic;
+	font-family: 'Amatic SC', cursive,'Noto Sans TC', Microsoft JhengHei, Helvetica, Arial, sans-serif;
+}
+.spiner{
+	visibility: hidden;
+}
+.input-group{
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+}
